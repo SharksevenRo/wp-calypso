@@ -688,8 +688,11 @@ export const normalizers = {
 			return [];
 		}
 		return payload.data.map( d => {
+			// Temporary until downstream changes occur
 			d.label = d.name;
 			d.value = d.sold * d.price;
+			d.total = d.sold * d.price;
+			d.quantity = d.sold;
 			return d;
 		} );
 	},
