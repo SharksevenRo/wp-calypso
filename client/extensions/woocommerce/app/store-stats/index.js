@@ -37,6 +37,17 @@ class StoreStats extends Component {
 			quantity: '7',
 			limit: '3',
 		};
+		const translate = this.props.translate;
+		const moduleStrings = {
+			title: translate( 'Products', { context: 'Stats: title of module' } ),
+			item: translate( 'Title', { context: 'Stats: module row header for product title.' } ),
+			value: translate( 'Qty', { context: 'Stats: module row header for number of products sold.' } ),
+			values: [
+				{ value: translate( 'Qty', { context: 'Stats: module row header for number of products sold.' } ) },
+				{ value: translate( 'Total', { context: 'Stats: module row header for total amount sold.' } ) },
+			],
+			empty: translate( 'No products found', { context: 'Stats: Info box label when the Products module is empty' } )
+		};
 		return (
 			<Main className="store-stats woocommerce" wideLayout={ true }>
 				<Navigation unit={ unit } type="orders" />
@@ -50,7 +61,7 @@ class StoreStats extends Component {
 				<div className="store-stats__module stats__module-column">
 					<StatsModule
 						path="top-sellers"
-						moduleStrings={ { title: 'Products', item: 'Title', value: 'Total', empty: 'No Products' } }
+						moduleStrings={ moduleStrings }
 						period={ { period: unit } }
 						query={ topSellersQuery }
 						statType="statsTopSellers"
