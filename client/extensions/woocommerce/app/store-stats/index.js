@@ -43,8 +43,8 @@ class StoreStats extends Component {
 			item: translate( 'Title', { context: 'Stats: module row header for product title.' } ),
 			value: translate( 'Total', { context: 'Stats: module row header for total amount sold.' } ),
 			values: [
-				{ quantity: translate( 'Qty', { context: 'Stats: module row header for number of products sold.' } ) },
-				{ total: translate( 'Total', { context: 'Stats: module row header for total amount sold.' } ) },
+				{ key: 'total', value: translate( 'Total', { context: 'Stats: module row header for total amount sold.' } ) },
+				{ key: 'quantity', value: translate( 'Qty', { context: 'Stats: module row header for number of products sold.' } ) },
 			],
 			empty: translate( 'No products found', { context: 'Stats: Info box label when the Products module is empty' } )
 		};
