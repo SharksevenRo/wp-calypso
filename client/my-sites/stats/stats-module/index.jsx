@@ -85,7 +85,7 @@ class StatsModule extends Component {
 		const { summary, period, path, siteSlug, statType } = this.props;
 		// For now...
 		if ( statType === 'statsTopSellers' ) {
-			return null;
+			return '/store/stats/products';
 		}
 		// Some modules do not have view all abilities
 		if ( ! summary && period && path && siteSlug ) {

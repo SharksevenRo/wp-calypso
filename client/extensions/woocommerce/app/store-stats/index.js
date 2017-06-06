@@ -34,8 +34,8 @@ class StoreStats extends Component {
 		const topSellersQuery = {
 			unit,
 			date: selectedDate,
-			quantity: "7",
-			limit: "3"
+			quantity: '7',
+			limit: '3',
 		};
 		return (
 			<Main className="store-stats woocommerce" wideLayout={ true }>
@@ -47,13 +47,15 @@ class StoreStats extends Component {
 					siteId={ siteId }
 					unit={ unit }
 				/>
-				<div className="stats__module-column">
+				<div className="store-stats__module stats__module-column">
 					<StatsModule
 						path="top-sellers"
-						moduleStrings={ { title: 'Products', item: 'Title' , value: 'Total', empty: 'No Products' } }
+						moduleStrings={ { title: 'Products', item: 'Title', value: 'Total', empty: 'No Products' } }
 						period={ { period: unit } }
 						query={ topSellersQuery }
-						statType="statsTopSellers" />
+						statType="statsTopSellers"
+						showSummaryLink
+					/>
 				</div>
 			</Main>
 		);
